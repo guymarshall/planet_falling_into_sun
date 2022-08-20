@@ -6,6 +6,7 @@ real(8) :: MASS_OF_SUN_KG = 1988470000000000000000000000000.0
 
 real(8) :: radius
 integer :: choice
+integer :: update_every
 
 integer :: delta_t = 1
 integer :: time = 0;
@@ -27,6 +28,10 @@ print *, "9 - Pluto"
 print *, "Choice: "
 
 read *, choice
+
+print *, "After how many seconds do you want to update?"
+
+read *, update_every
 
 select case (choice)
     case (1)
@@ -62,7 +67,7 @@ do
         call exit(0)
     end if
 
-    if (mod(time, 1000000) == 0) then
+    if (mod(time, update_every) == 0) then
         print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
     end if
 
