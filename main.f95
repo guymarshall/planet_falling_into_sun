@@ -62,9 +62,13 @@ do
         call exit(0)
     end if
 
-    print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
+    if (mod(time, 1000000) == 0) then
+        print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
+    end if
 
     time = time + delta_t
 end do
+
+print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
 
 end program main
