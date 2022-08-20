@@ -58,7 +58,7 @@ do
     delta_s = velocity * delta_t
     radius = radius + delta_s
 
-    if (radius <= 0.0)
+    if (radius <= 0.0) then
         call exit(0)
     end if
 
