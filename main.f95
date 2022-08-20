@@ -59,6 +59,8 @@ do
     radius = radius + delta_s
 
     if (radius <= 0.0) then
+        print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
+
         call exit(0)
     end if
 
@@ -68,7 +70,5 @@ do
 
     time = time + delta_t
 end do
-
-print *, "Time: ", time, "s, acceleration: ", acceleration, "ms^-2, velocity: ", velocity, "ms^-1, distance: ", radius, "m"
 
 end program main
