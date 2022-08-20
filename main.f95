@@ -1,27 +1,28 @@
 program main
 implicit none
 
+real(8) :: GRAVITATIONAL_CONSTANT = 0.000000000066743
+real(8) :: MASS_OF_SUN_KG = 1988470000000000000000000000000.0
 
+integer :: choice
+
+print *, "Choose your planet!"
+print *, "1 - Mercury"
+print *, "2 - Venus"
+print *, "3 - Earth"
+print *, "4 - Mars"
+print *, "5 - Jupiter"
+print *, "6 - Saturn"
+print *, "7 - Uranus"
+print *, "8 - Neptune"
+print *, "9 - Pluto"
+print *, "Choice: "
+
+read *, choice
+
+real(8) :: radius = 0.0
 
 end program main
-
-! final double GRAVITATIONAL_CONSTANT = 0.000000000066743;
-! final double MASS_OF_SUN_KG = 1988470000000000000000000000000.0;
-
-! Scanner scanner = new Scanner(System.in);
-! System.out.println("Choose your planet!");
-! System.out.println("1 - Mercury");
-! System.out.println("2 - Venus");
-! System.out.println("3 - Earth");
-! System.out.println("4 - Mars");
-! System.out.println("5 - Jupiter");
-! System.out.println("6 - Saturn");
-! System.out.println("7 - Uranus");
-! System.out.println("8 - Neptune");
-! System.out.println("9 - Pluto");
-! System.out.print("Choice: ");
-! int choice = scanner.nextInt();
-! double radius = 0.0;
 
 ! switch (choice) {
 !     case 1 -> radius = 69550000000.0;
